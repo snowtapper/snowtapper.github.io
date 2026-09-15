@@ -40,7 +40,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 28px 55px;
+    padding: 15px 55px;
+    border-bottom: 1px solid var(--emerald);
 }
 
 .name {
@@ -284,5 +285,16 @@ footer h2 {
     .card-row,
     .featured-project {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Adds equal spacing around content on separate pages */
+main.page-content {
+    padding: 70px 55px;
+}
+/* Reduces the spacing on phones */
+@media (max-width: 750px) {
+    main.page-content {
+        padding: 45px 25px;
     }
 }
