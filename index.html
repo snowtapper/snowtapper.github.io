@@ -1,16 +1,281 @@
 <!DOCTYPE html>
+
+<!--
+    This tells the browser that the page is written in English.
+    Almost everything on the website goes between <html> and </html>.
+-->
 <html lang="en">
+
+
+<!-- =========================================================
+     HEAD: SETTINGS AND INFORMATION ABOUT THE WEBSITE
+     Nothing in this section appears as regular page content.
+========================================================== -->
 <head>
+
+    <!-- Allows letters, symbols, and punctuation to display correctly -->
     <meta charset="UTF-8">
+
+    <!-- Makes the website resize correctly on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snow's Portfolio</title>
+
+    <!-- This appears in the browser tab -->
+    <title>Snow Tapper | EXPLORING CREATIVE ACTS</title>
+
+    <!-- Connects this HTML file to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body>
-    <h1>Hello, I'm Snow</h1>
-    <p>Welcome to my portfolio.</p>
 
-    <h2>My Projects</h2>
-    <p>This is where I will present my work.</p>
+<!-- =========================================================
+     BODY: EVERYTHING VISITORS CAN SEE
+========================================================== -->
+<body>
+
+    <!--
+        This wrapper holds the entire website.
+        The "website" class is styled in style.css.
+    -->
+    <div class="website">
+
+
+        <!-- =================================================
+             HEADER: WEBSITE NAME AND NAVIGATION
+        ================================================== -->
+        <header>
+
+            <!--
+                Clicking this returns visitors to the top of the page.
+                The # symbol means the top of the current page.
+            -->
+            <a class="name" href="#">
+                EXPLORING CREATIVE ACTS
+            </a>
+
+
+            <!--
+                Navigation links point to section IDs farther down.
+                For example, href="#about" finds id="about".
+            -->
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </header>
+
+
+        <!-- =================================================
+             MAIN: PRIMARY PAGE CONTENT
+        ================================================== -->
+        <main>
+
+
+            <!-- =============================================
+                 INTRODUCTION SECTION
+                 This now appears ABOVE the photo placeholders.
+            ============================================== -->
+            <section class="introduction" id="about">
+
+                <!-- Small category caption above your name -->
+                <p class="eyebrow">
+                    OUTDOORS • ART • AEROSPACE
+                </p>
+
+                <!-- Main page heading -->
+                <h1>SNOW TAPPER</h1>
+
+                <!-- Short introduction below your name -->
+                <p class="intro-text">
+                    Living to tell the stories. Here to make
+                    connections, create art, and share all the
+                    facets of a multifaceted life.
+                </p>
+
+                <!--
+                    This button jumps down to the section
+                    with id="projects".
+                -->
+                <a class="button" href="#projects">
+                    View my work
+                </a>
+
+            </section>
+
+
+            <!-- =============================================
+                 PHOTO PLACEHOLDERS
+                 These appear BELOW your name and introduction.
+
+                 Later, we can replace each colored box with
+                 a real <img> element.
+            ============================================== -->
+            <section class="image-row">
+
+                <!-- Left photo placeholder -->
+                <div class="photo-placeholder small">
+                    Photo coming soon
+                </div>
+
+                <!-- Larger center photo placeholder -->
+                <div class="photo-placeholder large">
+                    Featured photo coming soon
+                </div>
+
+                <!-- Right photo placeholder -->
+                <div class="photo-placeholder small">
+                    Photo coming soon
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 HORIZONTAL WORD BANNER
+            ============================================== -->
+            <div class="banner">
+                SHARE • COLLABORATE • EXPLORE • FEEL • EMERGE
+            </div>
+
+
+            <!-- =============================================
+                 EXPERIENCE SECTION
+                 The navigation's Experience link points here.
+            ============================================== -->
+            <section class="values" id="experience">
+
+                <!-- Section heading -->
+                <h2>Engineering with purpose</h2>
+
+
+                <!-- Container holding the three cards -->
+                <div class="card-row">
+
+
+                    <!-- DESIGN CARD -->
+                    <article class="card">
+
+                        <h3>Design</h3>
+
+                        <p>
+                            Working hands-on with various aircraft
+                            and aerial vehicles through internships
+                            and coursework has helped me develop a
+                            personal relationship with aviation and
+                            engineering.
+                        </p>
+
+                    </article>
+
+
+                    <!-- ANALYSIS CARD -->
+                    <article class="card">
+
+                        <h3>Analysis</h3>
+
+                        <p>
+                            Using computational tools and engineering
+                            principles to understand complex systems
+                            and develop informed solutions.
+                        </p>
+
+                    </article>
+
+
+                    <!-- TESTING CARD -->
+                    <article class="card">
+
+                        <h3>Testing</h3>
+
+                        <p>
+                            Turning data into useful conclusions and
+                            applying test results to improve designs.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 PROJECTS SECTION
+                 Both "Projects" and "View my work" point here.
+            ============================================== -->
+            <section class="projects" id="projects">
+
+                <!-- Small caption above the section heading -->
+                <p class="eyebrow">
+                    SELECTED WORK
+                </p>
+
+                <!-- Projects section heading -->
+                <h2>Featured project</h2>
+
+
+                <!-- Featured project container -->
+                <article class="featured-project">
+
+
+                    <!--
+                        Temporary project-image placeholder.
+                        We can replace this with a real image later.
+                    -->
+                    <div class="project-placeholder">
+                        Project image coming soon
+                    </div>
+
+
+                    <!-- Written project information -->
+                    <div class="project-description">
+
+                        <!-- Project name -->
+                        <h3>Aircraft Design Project</h3>
+
+                        <!-- Project summary -->
+                        <p>
+                            Add a short explanation of the project
+                            here. Describe the goal, your contribution,
+                            the tools you used, and the final result.
+                        </p>
+
+                        <!--
+                            This link does not lead anywhere yet.
+                            Later, it can open a separate project page.
+                        -->
+                        <a class="button" href="#">
+                            Learn more
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+
+        <!-- =================================================
+             FOOTER: CONTACT INFORMATION
+             The Contact navigation link points here.
+        ================================================== -->
+        <footer id="contact">
+
+            <h2>Let's connect</h2>
+
+            <p>
+                Add your email, LinkedIn, and GitHub links here.
+            </p>
+
+        </footer>
+
+    </div>
+
 </body>
+
 </html>
