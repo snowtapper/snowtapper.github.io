@@ -323,7 +323,7 @@ body.home-page {
             rgba(29, 59, 40, 0.30),
             rgba(29, 59, 40, 0.30)
         ),
-        url("images/fair-tree.jpeg");
+        url("images/general-outdoor/fair-tree.jpeg");
 
     /* Makes the photograph fill the browser window */
     background-size: cover;
@@ -344,5 +344,519 @@ body.home-page {
 @media (max-width: 750px) {
     body.home-page {
         background-attachment: scroll;
+    }
+}
+
+/* Consistent vertical spacing on separate pages */
+.page-content .eyebrow {
+    margin: 0 0 18px;
+}
+
+.page-content h1 {
+    margin: 0 0 28px;
+}
+
+.page-content p {
+    margin: 0 0 24px;
+    line-height: 1.55;
+}
+
+.page-content .large-text {
+    margin-bottom: 28px;
+}
+
+.page-content h2 {
+    margin: 45px 0 24px;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION AND DROPDOWNS
+   Keep this outside every @media section.
+========================================================= */
+
+header {
+    position: relative;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.name {
+    flex-shrink: 0;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 25px;
+    margin-left: auto;
+}
+
+.main-nav > a,
+.nav-dropdown > summary {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1;
+
+    color: var(--emerald);
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
+/* Position each dropdown relative to its heading */
+.nav-dropdown {
+    position: relative;
+}
+
+
+/* Remove the browser's default triangle */
+.nav-dropdown > summary {
+    display: block;
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-dropdown > summary::marker {
+    content: "";
+}
+
+.nav-dropdown > summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Add a controlled arrow after the heading */
+.nav-dropdown > summary::after {
+    content: " ▾";
+    font-size: 9px;
+}
+
+.nav-dropdown[open] > summary::after {
+    content: " ▴";
+}
+
+
+/* Dropdown box */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    width: max-content;
+    min-width: 190px;
+    padding: 8px;
+
+    background-color: var(--butter);
+    border: 1px solid var(--emerald);
+    box-shadow: 0 10px 25px rgb(29 59 40 / 18%);
+}
+
+
+/* Dropdown links appear one per row */
+.dropdown-menu a {
+    display: block;
+    padding: 10px 12px;
+
+    font-size: 11px;
+    line-height: 1.3;
+    white-space: nowrap;
+
+    color: var(--emerald);
+    text-decoration: none;
+}
+
+
+/* Hover appearance */
+.dropdown-menu a:hover {
+    color: var(--butter);
+    background-color: var(--emerald);
+}
+
+
+/* =========================================================
+   MOBILE DROPDOWNS
+========================================================= */
+
+@media (max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-left: 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        margin-top: 10px;
+        box-shadow: none;
+    }
+}
+
+
+/* =========================================================
+   GALLERY PAGE
+========================================================= */
+
+.gallery-page {
+    padding: 60px 55px;
+}
+
+.gallery-introduction {
+    max-width: 750px;
+    margin-bottom: 45px;
+}
+
+
+/* Mosaic grid */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 280px;
+    grid-auto-flow: dense;
+    gap: 18px;
+}
+
+
+/* Every gallery item */
+.media-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    min-width: 0;
+    padding: 28px;
+
+    color: var(--emerald);
+    text-decoration: none;
+
+    background-color: var(--pale-lime);
+    border-radius: 14px;
+}
+
+
+/* Card-size variations */
+.media-card.wide {
+    grid-column: span 2;
+}
+
+.media-card.tall {
+    grid-row: span 2;
+}
+
+
+/* Photograph cards */
+.photo-card {
+    padding: 0;
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Dark fade over the bottom of photographs */
+.photo-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 40%,
+            rgb(29 59 40 / 75%)
+        );
+}
+
+
+/* Photograph title */
+.photo-caption {
+    position: absolute;
+    right: 24px;
+    bottom: 22px;
+    left: 24px;
+    z-index: 1;
+
+    color: var(--butter);
+}
+
+.photo-caption span
+
+
+/* =========================================================
+   FINER GALLERY GRID AND RESPONSIVE CARD TEXT
+========================================================= */
+
+/* Four-column grid instead of three */
+.media-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 220px;
+    gap: 14px;
+}
+
+
+/* Slightly less padding inside text cards */
+.media-grid .media-card {
+    min-width: 0;
+    min-height: 0;
+    padding: 22px;
+}
+
+
+/* Photo cards do not need inside padding */
+.media-grid .photo-card {
+    padding: 0;
+}
+
+
+/* Wide cards occupy two of the four columns */
+.media-grid .media-card.wide {
+    grid-column: span 2;
+}
+
+
+/* Tall cards occupy two rows */
+.media-grid .media-card.tall {
+    grid-row: span 2;
+}
+
+
+/* Make text cards use their available height efficiently */
+.media-grid .writing-card,
+.media-grid .project-card,
+.media-grid .art-card {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Overrides the large general h2 styling */
+.media-grid .media-card h2 {
+    margin: 10px 0 14px;
+
+    font-size: clamp(22px, 2vw, 30px);
+    line-height: 1.05;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* Wide cards can support a slightly larger heading */
+.media-grid .media-card.wide h2 {
+    font-size: clamp(26px, 2.5vw, 38px);
+}
+
+
+/* Photo titles */
+.media-grid .photo-caption h2 {
+    margin: 6px 0 0;
+
+    font-size: clamp(24px, 2.3vw, 34px);
+    line-height: 1.05;
+}
+
+
+/* Smaller card labels */
+.media-grid .card-category,
+.media-grid .photo-caption span {
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+
+/* Keep excerpts from overflowing small cards */
+.media-grid .card-excerpt {
+    display: -webkit-box;
+    margin: 0 0 15px;
+
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 1.45;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+
+/* Push the link toward the bottom of text cards */
+.media-grid .read-link {
+    margin-top: auto;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   OUTDOOR PHOTOGRAPHY COLLECTIONS
+========================================================= */
+
+.photography-page {
+    padding: 70px 0;
+}
+
+.photography-introduction {
+    max-width: 800px;
+    padding: 0 55px 60px;
+}
+
+.photography-introduction h1 {
+    margin: 8px 0 18px;
+}
+
+
+/* Individual collection preview */
+.collection-preview {
+    padding: 60px 55px;
+    border-top: 1px solid var(--emerald);
+}
+
+.collection-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+
+    margin-bottom: 30px;
+}
+
+.collection-heading > div:first-child {
+    max-width: 700px;
+}
+
+.collection-heading h2 {
+    margin: 8px  0 15px;
+}
+
+.collection-description {
+    max-width: 650px;
+    margin: 0;
+}
+
+
+/* Previous and next buttons */
+.carousel-controls {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.scroll-button {
+    width: 44px;
+    height: 44px;
+
+    font-size: 20px;
+    color: var(--emerald);
+
+    background-color: transparent;
+    border: 1px solid var(--emerald);
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.scroll-button:hover {
+    color: var(--butter);
+    background-color: var(--emerald);
+}
+
+
+/* Horizontal photograph strip */
+.photo-strip {
+    display: grid;
+    grid-auto-flow: column;
+
+    /* Each photograph occupies about 40% of the strip */
+    grid-auto-columns: minmax(280px, 40%);
+
+    gap: 16px;
+    padding-bottom: 15px;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: inline mandatory;
+
+    scrollbar-color:
+        var(--chartreuse)
+        var(--butter);
+}
+
+.photo-strip a {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+
+    scroll-snap-align: start;
+    border-radius: 12px;
+}
+
+.photo-strip img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-strip a:hover img {
+    transform: scale(1.03);
+}
+
+
+/* Space above the collection button */
+.collection-button {
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   PHOTOGRAPHY PAGE ON PHONES
+========================================================= */
+
+@media (max-width: 750px) {
+    .photography-page {
+        padding-top: 45px;
+    }
+
+    .photography-introduction {
+        padding: 0 25px 45px;
+    }
+
+    .collection-preview {
+        padding: 45px 25px;
+    }
+
+    .collection-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .photo-strip {
+        /* Most of one photograph appears at a time */
+        grid-auto-columns: 85%;
     }
 }

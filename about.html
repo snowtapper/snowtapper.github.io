@@ -3,92 +3,190 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- This page gets its own browser-tab title -->
-    <title>About | Snow Tapper</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <!-- All pages share the same style.css file -->
+    <!-- Text shown in the browser tab -->
+    <title>About | Creative Bridge</title>
+
+    <!-- about.html is beside style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
     <div class="website">
 
-        <!-- Use the same navigation on every page -->
-        <header>
-            <a class="name" href="index.html">
-                CREATIVE BRIDGE
-            </a>
 
-            <nav>
-                <a href="about.html">ABOUT</a>
-                <a href="outdoors.html">OUTDOORS</a>
-                <a href="art.html">ART</a>
-                <a href="aerospace.html">AEROSPACE</a>
-            </nav>
-        </header>
+        <!-- =================================================
+             SHARED HEADER
 
-        <!-- This is the content unique to the About page -->
+             header.js inserts the complete header and navigation
+             inside this empty div.
+        ================================================== -->
+        <div id="site-header"></div>
+
+        <script src="header.js"></script>
+
+
+        <!-- =================================================
+             ABOUT-PAGE CONTENT
+        ================================================== -->
         <main class="page-content">
+
             <p class="eyebrow">
                 OUTDOORS • ART • AEROSPACE
             </p>
 
             <h1>ABOUT THIS PLACE</h1>
 
+
+            <!-- Introduction -->
             <p class="large-text">
-                Here, outside social media, away from comptetiion, worry of 
-                preception, or misrepresenting the moment, is where we come to 
-                explore creative acts. I believe that creative acts come from all 
-                corners of life and each can reflect beauty and intention.
-               
-             </p> 
-
-                Aspects of content represented here come in a wide variety of forms and 
-                figures. Whether that be writtn, visual, physical, philosophical, or even 
-                just a passing moment caught between stangers that felt striking. Sources of inspiration 
-                for me can come from my studies and work in aerospace, which is seemingly quantitative 
-                and technial, but can often leave me mesmorized and inspired. Addiionally, the outdoors
-                serve as never-ending source of newness and life. Constantly trying to get that tantilizing
-                feeling of being the small in the great big and beautiful and the feelings these wild places can evoke.
-
-                </p>
-
-                This site is and was built as an archive and display of the content and experiences I
-                found in my daily life, create myself, or explore with others. All the writting, visuals, 
-                and reflects are my own, and although this means they are imperfect at times, this 
-                makes them real. In an effort to avoid machine made art and perfection, this space
-                is a breeding ground for pure, innocent creating for the the joy of creating.
-
-            </p>
-
-            <h2>My story</h2>
-
-            <p>
-                Loving the outdoors has been engrained in me since day one. I grew up in 
-                the mountains of Bend, Oregon and had the privilege of skiing before class,
-                climbing at sunrise, week long river trips in the summers, hikes outside my door, 
-                and a community that put value on the wild. The Deschutes River ran directly through
-                town and given our frequent family trips on this river, the Rogue River, Salmon River 
-                (Main and Middle fork) and the McKenzie River, I see incedible symbolism in the water.
+                Here, outside social media, away from competition,
+                worry of perception, or misrepresenting the moment,
+                is where we come to explore creative acts and the act
+                of making. I believe that creative acts come from all
+                corners of life, and each can reflect beauty and
+                intention.
             </p>
 
             <p>
-                This can be several paragraphs. You can also add
-                photographs to this page later.
+                The mediums of content represented here come in a wide
+                variety of forms and figures. Whether that be written,
+                visual, physical, philosophical, or even just a passing
+                moment caught between strangers that felt striking,
+                sources of inspiration for me can come from anywhere.
+                My studies and work in aerospace are seemingly
+                quantitative and technical, but they can often leave me
+                mesmerized and inspired.
             </p>
 
-            <!-- Returns the visitor to the homepage -->
+            <p>
+                Additionally, the outdoors serve as a never-ending
+                source of newness and life. I am constantly trying to
+                find that tantalizing feeling of being small within
+                something great, big, and beautiful—and experiencing
+                the feelings these wild places can evoke.
+            </p>
+
+            <p>
+                This site was built as an archive and display of the
+                content and experiences I find in my daily life,
+                create myself, or explore with others. All the writing,
+                visuals, and reflections are my own unless otherwise
+                specified. Although this means they are imperfect at
+                times, that also makes them real and personal.
+            </p>
+
+            <p>
+                In an effort to avoid machine-made art and rigidity,
+                this space is a breeding ground for pure, exploratory
+                creating for the joy of creating.
+            </p>
+
+
+            <!-- My Story -->
+            <h2>My Story</h2>
+
+            <p class="large-text">
+                Loving the outdoors has been ingrained in me since day
+                one. I grew up in the mountains of Bend, Oregon, and
+                had the privilege of skiing before class, climbing at
+                sunrise, taking week-long river trips in the summers,
+                hiking outside my door, and living within a community
+                that valued the wild.
+            </p>
+
+            <p>
+                The Deschutes River ran directly through town. Through
+                frequent family trips on this river, the Rogue River,
+                the Salmon River—both the Main and Middle Fork—and the
+                McKenzie River, I began to see incredible symbolism in
+                the movement and life of rivers.
+            </p>
+
+            <p>
+                When leaving Bend for college, I found myself stumped
+                on what could be better than the mountain town where I
+                grew up. I knew that several grueling academic years
+                were ahead of me as a soon-to-be aerospace engineering
+                major, so I accepted that skiing would not be part of
+                my daily life as it had been.
+            </p>
+
+            <p>
+                Given this, in combination with looking to study a
+                niche subject, I landed in San Luis Obispo, California,
+                at Cal Poly. Along the way, there have been a plethora
+                of adventures and new places.
+            </p>
+
+            <p>
+                Given how I spend my free time and the places where I
+                grew up, aerospace came somewhat from left field. I
+                was introduced to the subject in a high-school physics
+                class when we were taught how a jet engine worked. I
+                was hooked.
+            </p>
+
+            <p>
+                I had always enjoyed mathematics and the sciences, and
+                flight felt like magic—whether experienced from the
+                ground or in the air. I was excited to learn how this
+                seemingly mystical science could be explained through
+                numbers and theory.
+            </p>
+
+            <p>
+                Now, years later, as I wrap up my bachelor's degree
+                with a master's on the horizon, I am still uncovering
+                that magic. Work experience has given me the
+                opportunity to become more hands-on with aircraft and
+                closer to flight than I could have imagined. I cannot
+                wait to keep chasing the pixie dust.
+            </p>
+
+            <p>
+                Amidst all of this, I frequently find myself within the
+                arts. Both of my parents are creatives—photographers,
+                graphic designers, ceramicists, cooks, and practitioners
+                of many more niche arts that I have had the pleasure of
+                witnessing over the years.
+            </p>
+
+            <p>
+                I was often crafty growing up, whether that meant
+                crochet, painting, collage, pottery, mixed media, or
+                something else. Now, while balancing various parts of
+                my life alongside creative outlets, I find myself doing
+                many of the same things and exploring a few new artistic
+                hobbies.
+            </p>
+
+            <p>
+                Crochet and collage are still high on the list, as well
+                as writing poetry, drawing, watercolor, block printing,
+                digital art, photography, or whatever feels intriguing.
+            </p>
+
+
+            <!-- Returns to index.html -->
             <a class="button" href="index.html">
-                Return home
+                Return Home
             </a>
+
         </main>
 
-        <footer>
-            <h2>Let's connect</h2>
-            <p>Add your email, LinkedIn, and GitHub links here.</p>
-        </footer>
+
+       <!-- The shared footer will be inserted here -->
+<div id="site-footer"></div>
+
+<!-- Loads the shared footer -->
+<script src="footer.js"></script>
 
     </div>
 </body>

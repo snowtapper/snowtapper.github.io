@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This page gets its own browser-tab title -->
+    <title>Gallery | Creative Bridge</title>
+
+    <!-- All pages share the same style.css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="website">
+
+        <!-- Use the same navigation on every page -->
+        <header>
+            <a class="name" href="index.html">
+                CREATIVE BRIDGE
+            </a>
+
+<nav class="main-nav">
+
+    <!-- Regular link -->
+    <a href="gallery.html">GALLERY</a>
+
+
+    <!-- OUTDOORS DROPDOWN -->
+    <details class="nav-dropdown" name="main-navigation">
+        <summary>OUTDOORS</summary>
+
+        <div class="dropdown-menu">
+            <a href="outdoors/index.html">
+                All Outdoors
+            </a>
+
+            <a href="outdoors/index.html#writing">
+                Written Works
+            </a>
+
+            <a href="outdoors/index.html#visual">
+                Visual Works
+            </a>
+
+            <a href="outdoors/index.html#photography">
+                Photography
+            </a>
+        </div>
+    </details>
+
+
+    <!-- ART DROPDOWN -->
+    <details class="nav-dropdown" name="main-navigation">
+        <summary>ART</summary>
+
+        <div class="dropdown-menu">
+            <a href="art/index.html">
+                All Art
+            </a>
+
+            <a href="art/index.html#writing">
+                Written Works
+            </a>
+
+            <a href="art/index.html#visual">
+                Visual Works
+            </a>
+
+            <a href="art/index.html#photography">
+                Photography
+            </a>
+        </div>
+    </details>
+
+
+    <!-- AEROSPACE DROPDOWN -->
+    <details class="nav-dropdown" name="main-navigation">
+        <summary>AEROSPACE</summary>
+
+        <div class="dropdown-menu">
+            <a href="aerospace/index.html">
+                All Aerospace
+            </a>
+
+            <a href="aerospace/index.html#projects">
+                Projects
+            </a>
+
+            <a href="aerospace/index.html#writing">
+                Technical Writing
+            </a>
+
+            <a href="aerospace/index.html#photography">
+                Photography
+            </a>
+        </div>
+    </details>
+
+
+    <!-- Regular link -->
+    <a href="about.html">ABOUT</a>
+
+</nav>
+        </header>
+
+        <!-- This is the content unique to the About page -->
+        <main class="gallery-page">
+
+    <!-- Gallery introduction -->
+    <section class="gallery-introduction">
+        <p class="eyebrow">
+            WRITING • PHOTOGRAPHY • ART • AEROSPACE
+        </p>
+
+        <h1>The Gallery</h1>
+
+        <p>
+            An evolving archive of written, visual, technical,
+            and personal work.
+        </p>
+    </section>
+
+
+    <!-- =====================================================
+         MIXED-MEDIA GRID
+    ====================================================== -->
+    <section class="media-grid">
+
+
+        <!-- LARGE PHOTOGRAPH -->
+        <a
+            class="media-card photo-card wide"
+            href="works/general-outdoor/acro-yoga.html"
+        >
+            <img
+                src="images/general-outdoor/acro-yoga-on-beach.jpg"
+                alt="Acro yoga on a California beach"
+            >
+
+            <div class="photo-caption">
+                <span>Photography • Outdoors</span>
+                <h2>Movement by the Ocean</h2>
+            </div>
+        </a>
+
+
+        <!-- WRITTEN ARTICLE -->
+        <a
+            class="media-card writing-card"
+            href="works/symbolism-of-water.html"
+        >
+            <p class="card-category">
+                Writing • Outdoors
+            </p>
+
+            <h2>The Symbolism of Water</h2>
+
+            <p class="card-excerpt">
+                Reflections on movement, wild rivers, memory,
+                and the places that continually draw us back.
+            </p>
+
+            <span class="read-link">
+                Read the article →
+            </span>
+        </a>
+
+
+        <!-- TALL PHOTOGRAPH -->
+        <a
+            class="media-card photo-card tall"
+            href="works/general-outdoor/el-capitan.html"
+        >
+            <img
+                src="images/general-outdoor/el-cap-hug.jpeg"
+                alt="Standing at the base of El Capitan"
+            >
+
+            <div class="photo-caption">
+                <span>Photography • Outdoors</span>
+                <h2>El Capitan</h2>
+            </div>
+        </a>
+
+
+        <!-- AEROSPACE PROJECT -->
+        <a
+            class="media-card project-card"
+            href="works/aircraft-design.html"
+        >
+            <p class="card-category">
+                Project • Aerospace
+            </p>
+
+            <h2>Aircraft Design</h2>
+
+            <p class="card-excerpt">
+                Exploring the relationship between engineering
+                analysis, physical design, and flight.
+            </p>
+
+            <span class="read-link">
+                View the project →
+            </span>
+        </a>
+
+
+        <!-- STANDARD PHOTOGRAPH -->
+        <a
+            class="media-card photo-card"
+            href="works/general-outdoor/yosemite-backpacking.html"
+        >
+            <img
+                src="images/general-outdoor/yosemite-backpacking.jpeg"
+                alt="Backpacking through Yosemite"
+            >
+
+            <div class="photo-caption">
+                <span>Photography • Outdoors</span>
+                <h2>Yosemite</h2>
+            </div>
+        </a>
+
+
+        <!-- ART OR VISUAL WORK -->
+        <a
+            class="media-card art-card wide"
+            href="works/creative-experiment.html"
+        >
+            <p class="card-category">
+                Visual Work • Art
+            </p>
+
+            <h2>Creative Experiments</h2>
+
+            <p class="card-excerpt">
+                A collection of visual studies, unfinished ideas,
+                observations, and acts of creating for the joy of it.
+            </p>
+
+            <span class="read-link">
+                Explore the collection →
+            </span>
+        </a>
+
+
+        <!-- SHORT WRITTEN PIECE -->
+        <a
+            class="media-card writing-card light"
+            href="works/taking-up-space.html"
+        >
+            <p class="card-category">
+                Writing • Personal
+            </p>
+
+            <h2>Taking Up Space</h2>
+
+            <p class="card-excerpt">
+                Thoughts on creating freely, being imperfect,
+                and living a multifaceted life.
+            </p>
+
+            <span class="read-link">
+                Read the piece →
+            </span>
+        </a>
+
+    </section>
+
+</main>
+
+<!-- The shared footer will be inserted here -->
+<div id="site-footer"></div>
+
+<!-- Loads the shared footer -->
+<script src="footer.js"></script>
+
+    </div>
+</body>
+
+</html>

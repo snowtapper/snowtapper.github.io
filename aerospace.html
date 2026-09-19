@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page resize correctly on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text displayed in the browser tab -->
+    <title>Photography Collections | Creative Bridge</title>
+
+    <!--
+        This page is inside the outdoors-pages folder.
+        ../ goes up to the main Portfolio folder.
+    -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<body>
+
+    <!-- Holds the visible website -->
+    <div class="website">
+
+
+        <!-- ==================================================
+             UNIVERSAL HEADER
+
+             header.js will replace this empty div with the
+             navigation header used throughout the website.
+        =================================================== -->
+        <div id="site-header"></div>
+
+
+        <!-- ==================================================
+             MAIN PAGE CONTENT
+        =================================================== -->
+        <main class="photography-page">
+
+
+            <!-- Page introduction -->
+            <section class="photography-introduction">
+
+                <p class="eyebrow">
+                    OUTDOORS • PHOTOGRAPHY
+                </p>
+
+                <h1>Written Works</h1>
+
+                <p>
+                    Coming soon.
+                </p>
+
+            </section>
+
+        <!-- ==================================================
+             UNIVERSAL FOOTER
+
+             footer.js will replace this empty div with the
+             footer used throughout the website.
+        =================================================== -->
+        <div id="site-footer"></div>
+
+    </div>
+
+
+    <!-- ==================================================
+         SHARED JAVASCRIPT FILES
+
+         ../ is required because this HTML page is located
+         inside the outdoors-pages folder.
+    =================================================== -->
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+
+    <!-- ==================================================
+         PHOTOGRAPHY STRIP BUTTONS
+
+         This makes each left and right arrow scroll only
+         the photo strip belonging to that collection.
+    =================================================== -->
+    <script>
+        const collections =
+            document.querySelectorAll(".collection-preview");
+
+        collections.forEach((collection) => {
+
+            const photoStrip =
+                collection.querySelector(".photo-strip");
+
+            const previousButton =
+                collection.querySelector(".previous");
+
+            const nextButton =
+                collection.querySelector(".next");
+
+
+            previousButton.addEventListener("click", () => {
+
+                photoStrip.scrollBy({
+                    left: -photoStrip.clientWidth * 0.75,
+                    behavior: "smooth"
+                });
+
+            });
+
+
+            nextButton.addEventListener("click", () => {
+
+                photoStrip.scrollBy({
+                    left: photoStrip.clientWidth * 0.75,
+                    behavior: "smooth"
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
